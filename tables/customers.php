@@ -16,7 +16,7 @@ $link = mysqli_connect($host,$user,$password,$database) or die("Error" .mysqli_e
 if($result_n)
 {
 	$num = mysqli_num_rows($result_n);
-    echo "<table> <tr> <th> Id покупця </th> <th> Ім'я покупця </th> <th> Вік </th><th>Товар </th><th>Кількість товару</th><th>Ціна</th><th>Дата</th><tr> " ;
+    echo "<table> <tr> <th> Id покупця </th> <th> Ім'я покупця </th> <th> Вік </th><th>Стать </th><th>Продавець</th><th>Товар</th><th>Кількість товару</th><th>Дата</th><tr> " ;
     
     while ($row = mysqli_fetch_row ($result_n)) 
     {
