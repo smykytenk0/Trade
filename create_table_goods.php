@@ -17,7 +17,7 @@ $query1 = "CREATE Table goods
 $result = mysqli_query($link, $query1) or die("Error" .mysqli_error($link));
 if ($result)
 {
-	echo "Table staff was created<br>";
+	echo "Table goods was created<br>";
 }
 mysqli_close($link);
 ?>

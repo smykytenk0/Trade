@@ -12,7 +12,7 @@ $link = mysqli_connect($host,$user,$password,$database)
 $query1 = "CREATE Table outlets
 (
 	id_outlets INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	type_of_outlet VARCHAR(200) NOT NULL,
+	id_of_type INT(11) NOT NULL,
 	name VARCHAR(200) NOT NULL,
 	number_of_sections INT(11) NOT NULL,
 	manager VARCHAR(200) NOT NUll,

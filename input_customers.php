@@ -31,21 +31,21 @@ if(isset($_POST['name'])&&isset($_POST['age'])&&isset($_POST['sex'])&&isset($_PO
 	mysqli_close($link);
 }
 ?>
-<h2 class="input">Put a new outlet</h2>
+<h2 class="input">Вкажіть покупця</h2>
 <form method="POST">
-<p>Enter name:<br>
+<p>Введіть ім'я:<br>
 <input type="text" name="name"/></p>
-<p>Enter age:<br>
+<p>Введіть вік:<br>
 <input type="text" name="age"/></p>
-<p>Enter sex:<br>
+<p>Введіть стать:<br>
 <input type="text" name="sex"/></p>
-<p>Enter id_staff:<br>
+<p>Введіть id персоналу:<br>
 <input type="text" name="id_staff"/></p>
-<p>Enter id_goods:<br>
+<p>Введіть id товару:<br>
 <input type="text" name="id_goods"/></p>
-<p>Enter amount_goods:<br>
+<p>Введіть кількість товарів:<br>
 <input type="text" name="amount_goods"/></p>
-<p>Enter data:<br>
+<p>Введіть дату:<br>
 <input type="text" name="data"/></p>
 <input type = "submit" value = "Input">
 </form>

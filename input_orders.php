@@ -30,19 +30,19 @@ if(isset($_POST['id_outlets'])&&isset($_POST['id_provider'])&&isset($_POST['id_g
 	mysqli_close($link);
 }
 ?>
-<h2 class="input">Put a new order</h2>
+<h2 class="input">Введіть нове замовлення</h2>
 <form method="POST">
-<p>Enter id_outlets:<br>
+<p>Введіть id торгової точки:<br>
 <input type="text" name="id_outlets"/></p>
-<p>Enter id_provider:<br>
+<p>Введіть id постачальника:<br>
 <input type="text" name="id_provider"/></p>
-<p>Enter id_goods:<br>
+<p>Введіть id товару:<br>
 <input type="text" name="id_goods"/></p>
-<p>Enter amount:<br>
+<p>Введіть кількість:<br>
 <input type="text" name="amount"/></p>
-<p>Enter price:<br>
+<p>Введіть ціну:<br>
 <input type="text" name="price"/></p>
-<p>Enter data:<br>
+<p>Введіть дату:<br>
 <input type="text" name="data"/></p>
 <input type = "submit" value = "Input">
 </form>

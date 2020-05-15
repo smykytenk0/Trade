@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css.css">
 </head>
 <body>
 	<?php
@@ -10,7 +11,7 @@ $link = mysqli_connect($host,$user,$password,$database) or die("Error" .mysqli_e
 	if(isset($_POST['search'])){
 		$searchq= $_POST['search'];
 		echo "Пошуковий запит: $searchq<br>";
-		$a = "SELECT orders.id_order, outlets.name, providers.provider, goods.goods, orders.amount, orders.price, orders.data FROM orders,providers,outlets, goods  WHERE orders.id_goods=(SELECT id_goods FROM goods WHERE goods='$searchq' AND orders.id_provider=providers.id_provider)AND goods.id_goods=orders.id_goods AND outlets.id_outlets = orders.id_outlets " ;
+		$a = "SELECT orders.id_order, outlets.name, providers.provider, goods.goods, orders.amount, orders.price, orders.data FROM orders,providers,outlets, goods  WHERE orders.id_goods=(SELECT id_goods FROM goods WHERE goods='$searchq' AND orders.id_provider=providers.id_provider)AND goods.id_goods=orders.id_goods AND outlets.id_outlets = orders.id_outlets";
 		$result_n = mysqli_query($link, $a) or die("Ошибка " . mysqli_error($link));
 
 if($result_n)

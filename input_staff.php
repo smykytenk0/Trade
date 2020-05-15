@@ -28,15 +28,15 @@ if(isset($_POST['position'])&&isset($_POST['name'])&&isset($_POST['id_outlets'])
 	mysqli_close($link);
 }
 ?>
-<h2 class="input">Put a new outlet</h2>
+<h2 class="input">Вкажіть нового робітника</h2>
 <form method="POST">
-<p>Enter position:<br>
+<p>Введіть посаду:<br>
 <input type="text" name="position"/></p>
-<p>Enter name:<br>
+<p>Введіть ім'я:<br>
 <input type="text" name="name"/></p>
-<p>Enter id_outlets:<br>
+<p>Введіть id торгової точки:<br>
 <input type="text" name="id_outlets"/></p>
-<p>Enter sallary:<br>
+<p>Введіть зарплату:<br>
 <input type="text" name="sallary"/></p>
 <input type = "submit" value = "Input">
 </form>

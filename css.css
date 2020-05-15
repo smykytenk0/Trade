@@ -1,6 +1,6 @@
 body{
-	background-color: #FFFFE0;
-	font-family: cursive; 
+	font-family: cursive;
+	top:0; 
 }
 
 li a{
@@ -10,8 +10,12 @@ li a{
 
 header{
 	display: grid;
+	position: fixed;
+	top:0;
+	width:99%;
 	background-color:#87CEFA; 
-	grid-template-areas: "main tables requests"
+	grid-template-areas: "main tables requests";
+	font-size: 20px
 }
 
 header div{
@@ -33,4 +37,49 @@ header div a{
 
 .requests{
 	grid-area: requests;	
+}
+
+.mainPhoto img{
+	margin: 20px;
+	width: 400px
+}
+
+.mainPhoto {
+	margin-top:8%;
+}
+
+.grid{
+	display: grid;
+	grid-template-areas: "description"
+	"picture"
+}
+
+.description{
+	grid-area: description;
+}
+
+.picture{
+	grid-area: picture;
+}
+
+.picture img{
+	width: 300px;
+}
+
+.tables_grid{
+	display: grid;
+	grid-template-areas: "grid_one grid_two grid_three"
+
+}
+
+.grid1{
+	grid-area: grid_one;
+}
+
+.grid2{
+	grid-area: grid_two;
+}
+
+.grid3{
+	grid-area: grid_three;
 }

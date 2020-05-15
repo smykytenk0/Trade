@@ -25,9 +25,9 @@ if(isset($_POST['type']))
 	mysqli_close($link);
 }
 ?>
-<h2 class="input">Put a new type</h2>
+<h2 class="input">Вкажіть новий тип торгової точки</h2>
 <form method="POST">
-<p>Enter type:<br>
+<p>Введіть тип торгової точки:<br>
 <input type="text" name="type"/></p>
 <input type = "submit" value = "Input">
 </form>

@@ -25,9 +25,9 @@ if(isset($_POST['goods']))
 	mysqli_close($link);
 }
 ?>
-<h2 class="input">Put a new goods</h2>
+<h2 class="input">Введіть новий товар</h2>
 <form method="POST">
-<p>Enter goods:<br>
+<p>Введіть товар:<br>
 <input type="text" name="goods"/></p>
 <input type = "submit" value = "Input">
 </form>
