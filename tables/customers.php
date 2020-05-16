@@ -5,12 +5,17 @@
     <link rel="stylesheet" type="text/css" href="../css.css">
 </head>
 <body>
+	<header>
+		<div class='main'><a href="../index1.html">Головна</a></div>
+		<div class='tables'><a href="../tables.html">Розділи</a></div>
+		<div class='requests'><a href="../requests.html">Запити</a></div>
+	</header>
 	<?php
 require_once '../connection.php';
 $link = mysqli_connect($host,$user,$password,$database) or die("Error" .mysqli_error($link));
 		$searchq= $_POST['search'];
 		echo "Таблиця покупців:<br>";
-		$a = "SELECT customers.id_purchase, customers.name, customers.age, customers.sex, staff.name, goods.goods, customers.amount_goods, customers.data FROM customers JOIN staff ON staff.id_staff=customers.id_staff JOIN goods ON goods.id_goods=customers.id_goods" ;
+		$a = "SELECT customers.id_purchase, customers.name, customers.age, customers.sex, staff.name, goods.goods, customers.amount_goods, customers.data FROM customers JOIN staff ON staff.id_staff=customers.id_staff JOIN goods ON goods.id_goods=customers.id_goods ORDER BY(customers.id_purchase)  " ;
 		$result_n = mysqli_query($link, $a) or die("Ошибка " . mysqli_error($link));
 
 if($result_n)
@@ -32,5 +37,7 @@ if($result_n)
 
 mysqli_close($link);
 ?>
+<a href="../input_customers.php" class="button21">Додати покупця</a>
+
 </body>
 </html>

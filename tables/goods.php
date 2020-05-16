@@ -5,11 +5,16 @@
     <link rel="stylesheet" type="text/css" href="../css.css">
 </head>
 <body>
+	<header>
+		<div class='main'><a href="../index1.html">Головна</a></div>
+		<div class='tables'><a href="../tables.html">Розділи</a></div>
+		<div class='requests'><a href="../requests.html">Запити</a></div>
+	</header>
 	<?php
 require_once '../connection.php';
 $link = mysqli_connect($host,$user,$password,$database) or die("Error" .mysqli_error($link));
 		echo "Таблиця товарів:<br>";
-		$a = "SELECT * from goods " ;
+		$a = "SELECT * from goods ORDER BY(id_goods)  " ;
 		$result_n = mysqli_query($link, $a) or die("Ошибка " . mysqli_error($link));
 
 if($result_n)
@@ -31,5 +36,6 @@ if($result_n)
 
 mysqli_close($link);
 ?>
+<a href="../input_goods.php" class="button21">Додати товар</a>
 </body>
 </html>

@@ -5,6 +5,12 @@
 	<link rel="stylesheet" href="css.css">
 </head>
 <body>
+	<header>
+		<div class='main'><a href="index1.html">Головна</a></div>
+		<div class='tables'><a href="tables.html">Розділи</a></div>
+		<div class='requests'><a href="requests.html">Запити</a></div>
+	</header>
+	<div class="php">
 <?php
 
 require_once 'connection.php';
@@ -32,6 +38,7 @@ if(isset($_POST['id_of_type'])&&isset($_POST['name'])&&isset($_POST['number_of_s
 	mysqli_close($link);
 }
 ?>
+</div>
 <h2 class="input">Вкажіть нову торгову точку</h2>
 <form method="POST">
 <p>Введіть id типу торгової точки:<br>

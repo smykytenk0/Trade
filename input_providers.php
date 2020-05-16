@@ -5,6 +5,12 @@
 	<link rel="stylesheet" href="css.css">
 </head>
 <body>
+	<header>
+		<div class='main'><a href="index1.html">Головна</a></div>
+		<div class='tables'><a href="tables.html">Розділи</a></div>
+		<div class='requests'><a href="requests.html">Запити</a></div>
+	</header>
+	<div class="php">
 <?php
 
 require_once 'connection.php';
@@ -26,9 +32,10 @@ if(isset($_POST['provider']))
 	mysqli_close($link);
 }
 ?>
-<h2 class="input">Put a new provider</h2>
+</div>
+<h2 class="input">Введіть нового постачальника</h2>
 <form method="POST">
-<p>Enter provider:<br>
+<p>Введіть постачальника:<br>
 <input type="text" name="provider"/></p>
 <input type = "submit" value = "Input">
 </form>

@@ -5,6 +5,12 @@
 	<link rel="stylesheet" href="css.css">
 </head>
 <body>
+	<header>
+		<div class='main'><a href="index1.html">Головна</a></div>
+		<div class='tables'><a href="tables.html">Розділи</a></div>
+		<div class='requests'><a href="requests.html">Запити</a></div>
+	</header>
+	<div class="php">
 <?php
 
 require_once 'connection.php';
@@ -25,6 +31,7 @@ if(isset($_POST['goods']))
 	mysqli_close($link);
 }
 ?>
+</div>
 <h2 class="input">Введіть новий товар</h2>
 <form method="POST">
 <p>Введіть товар:<br>

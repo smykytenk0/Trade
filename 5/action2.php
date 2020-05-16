@@ -5,6 +5,12 @@
 	<link rel="stylesheet" type="text/css" href="../css.css">
 </head>
 <body>
+	<header>
+		<div class='main'><a href="../index1.html">Головна</a></div>
+		<div class='tables'><a href="../tables.html">Розділи</a></div>
+		<div class='requests'><a href="../requests.html">Запити</a></div>
+	</header>
+	<div class="php">
 	<?php
 require_once '../connection.php';
 $link = mysqli_connect($host,$user,$password,$database) or die("Error" .mysqli_error($link));
@@ -15,7 +21,7 @@ $link = mysqli_connect($host,$user,$password,$database) or die("Error" .mysqli_e
 		echo "Мінімальна дата: $date_fromh<br>";
 		echo "Максимальна дата: $date_toh<br>";
 		echo "Вказаний тип: $typeh<br>";
-		$a = "SELECT customers.name, sum(customers.amount_goods) AS amount, type_of_outlets.type FROM customers JOIN staff ON staff.id_staff=customers.id_staff JOIN outlets ON outlets.id_outlets=staff.id_outlets JOIN type_of_outlets ON type_of_outlets.id_of_type=outlets.id_of_type WHERE customers.data<'$date_toh' AND customers.data>'$date_fromh' AND type_of_outlets.type='$typeh' GROUP BY(name)";
+		$a = "SELECT staff.name, sum(customers.amount_goods) AS amount, type_of_outlets.type FROM customers JOIN staff ON staff.id_staff=customers.id_staff JOIN outlets ON outlets.id_outlets=staff.id_outlets JOIN type_of_outlets ON type_of_outlets.id_of_type=outlets.id_of_type WHERE customers.data<'$date_toh' AND customers.data>'$date_fromh' AND type_of_outlets.type='$typeh' GROUP BY(name)";
 		$result_n = mysqli_query($link, $a) or die("Ошибка " . mysqli_error($link));
 
 if($result_n)
@@ -39,5 +45,6 @@ if($result_n)
 		}
 mysqli_close($link);
 ?>
+</div>
 </body>
 </html>

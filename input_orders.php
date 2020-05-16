@@ -5,6 +5,12 @@
 	<link rel="stylesheet" href="css.css">
 </head>
 <body>
+	<header>
+		<div class='main'><a href="index1.html">Головна</a></div>
+		<div class='tables'><a href="tables.html">Розділи</a></div>
+		<div class='requests'><a href="requests.html">Запити</a></div>
+	</header>
+	<div class="php">
 <?php
 
 require_once 'connection.php';
@@ -30,6 +36,7 @@ if(isset($_POST['id_outlets'])&&isset($_POST['id_provider'])&&isset($_POST['id_g
 	mysqli_close($link);
 }
 ?>
+</div>
 <h2 class="input">Введіть нове замовлення</h2>
 <form method="POST">
 <p>Введіть id торгової точки:<br>

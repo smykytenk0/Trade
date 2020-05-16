@@ -5,17 +5,23 @@
 	<link rel="stylesheet" type="text/css" href="../css.css">
 </head>
 <body>
+	<header>
+		<div class='main'><a href="../index1.html">Головна</a></div>
+		<div class='tables'><a href="../tables.html">Розділи</a></div>
+		<div class='requests'><a href="../requests.html">Запити</a></div>
+	</header>
+	<div class="php">
 	<?php
 require_once '../connection.php';
 $link = mysqli_connect($host,$user,$password,$database) or die("Error" .mysqli_error($link));
-	if(isset($_POST['type'])&&isset($_POST['date_from'])&&isset($_POST['date_to'])){
-		$typeh = $_POST['type'];
+	if(isset($_POST['name'])&&isset($_POST['date_from'])&&isset($_POST['date_to'])){
+		$nameh = $_POST['name'];
 		$date_fromh = $_POST['date_from'];
 		$date_toh = $_POST['date_to'];
-		echo "Тип торгової точки: $typeh<br>";
-		$a = "SELECT goods.goods, orders.amount, orders.data FROM orders JOIN goods ON goods.id_goods=orders.id_goods  JOIN outlets ON outlets.id_outlets=orders.id_outlets JOIN type_of_outlets ON type_of_outlets.id_of_type = outlets.id_of_type WHERE type_of_outlets.type='$typeh' AND orders.data<='$date_toh' AND orders.data>='$date_fromh'" ;
+		echo "Торгова точка: $nameh<br>";
+		$a = "SELECT goods.goods, orders.amount, orders.data FROM orders JOIN goods ON goods.id_goods=orders.id_goods  JOIN outlets ON outlets.id_outlets=orders.id_outlets WHERE outlets.name='$nameh' AND orders.data<='$date_toh' AND orders.data>='$date_fromh'" ;
 		$result_b = mysqli_query($link, $a) or die("Ошибка " . mysqli_error($link));
-		$n = "SELECT goods.goods, customers.amount_goods, customers.data FROM customers JOIN goods ON goods.id_goods=customers.id_goods JOIN staff ON staff.id_staff=customers.id_staff JOIN outlets ON outlets.id_outlets=staff.id_outlets JOIN type_of_outlets ON type_of_outlets.id_of_type = outlets.id_of_type WHERE type_of_outlets.type='$typeh' AND customers.data<='$date_toh' AND customers.data>='$date_fromh'";
+		$n = "SELECT goods.goods, customers.amount_goods, customers.data FROM customers JOIN goods ON goods.id_goods=customers.id_goods JOIN staff ON staff.id_staff=customers.id_staff JOIN outlets ON outlets.id_outlets=staff.id_outlets WHERE outlets.name='$nameh' AND customers.data<='$date_toh' AND customers.data>='$date_fromh'";
 		$result_n = mysqli_query($link, $n) or die("Ошибка " . mysqli_error($link));
 	
 if($result_b)
@@ -56,5 +62,6 @@ if($result_n)
 		}
 mysqli_close($link);
 ?>
+</div>
 </body>
 </html>
