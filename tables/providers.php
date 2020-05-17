@@ -37,5 +37,6 @@ if($result_n)
 mysqli_close($link);
 ?>
 <a href="../input_providers.php" class="button21">Додати постачальника</a>
+<a href="../delete_providers/first.php" class="button21">Видалити постачальника</a>
 </body>
 </html>

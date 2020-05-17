@@ -37,5 +37,6 @@ if($result_n)
 mysqli_close($link);
 ?>
 <a href="../input_staff.php" class="button21">Додати персонал</a>
+<a href="../delete_staff/first.php" class="button21">Видалити персонал</a>
 </body>
 </html>

@@ -48,6 +48,7 @@ header div a{
 
 .mainPhoto {
 	margin-top:8%;
+	grid-area: mainPhoto;
 }
 
 .grid{
@@ -123,4 +124,19 @@ body a.button21:active {
 
 body .php{
 	margin-top: 30px;
+}
+
+.info{
+	margin-top:30px;
+	display: grid;
+	grid-template-areas: "mainPhoto maintext"
+}
+
+.mainPhoto{
+	grid-area: mainPhoto;
+}
+.maintext{
+	margin-top: 35px;
+	grid-area: maintext;
+	font-size:20px;
 }

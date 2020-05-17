@@ -37,5 +37,6 @@ if($result_n)
 mysqli_close($link);
 ?>
 <a href="../input_outlet.php" class="button21">Додати торгову точку</a>
+<a href="../delete_outlets/first.php" class="button21">Видалити торгову точку</a>
 </body>
 </html>

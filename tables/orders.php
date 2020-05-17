@@ -37,5 +37,6 @@ if($result_n)
 mysqli_close($link);
 ?>
 <a href="../input_orders.php" class="button21">Додати замовлення</a>
+<a href="../delete_orders/first.php" class="button21">Видалити замовлення</a>
 </body>
 </html>

@@ -37,5 +37,6 @@ if($result_n)
 mysqli_close($link);
 ?>
 <a href="../input_goods.php" class="button21">Додати товар</a>
+<a href="../delete_goods/first.php" class="button21">Видалити товар</a>
 </body>
 </html>
